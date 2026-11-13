@@ -1,6 +1,5 @@
 from drafter import *
 from dataclasses import dataclass
-from bakery import assert_equal
 
 set_website_title("9-Ball Challenge")
 
@@ -259,7 +258,7 @@ def make_questions(number: int, difficulty: str) -> list[Question]:
         )
     ]
     
-    questions = []
+    questions: list[Question] = []
     
     for question in all_questions:
         if question.difficulty == difficulty:
